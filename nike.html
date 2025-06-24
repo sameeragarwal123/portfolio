@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nike Retention Analysis · Sameer Agarwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-gray-50 text-gray-900">
+  <!-- Top bar -->
+  <header class="py-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4">
+      <a href="index.html" class="text-indigo-100 hover:text-white text-sm">&larr; Back to portfolio</a>
+      <h1 class="text-lg font-semibold tracking-wide">Project Details</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-white shadow-lg rounded-b-2xl">
+    <div class="max-w-5xl mx-auto p-8 md:flex md:gap-8">
+      <img src="images/nike_logo.jpg" alt="Nike Retention" class="w-full md:w-96 h-56 md:h-64 object-cover rounded-2xl mb-6 md:mb-0" />
+      <div>
+        <h2 class="text-3xl font-bold text-purple-700">Nike Customer Retention &amp; Commitment Analysis</h2>
+        <p class="mt-4 text-gray-700">
+          Deep-dive consulting project identifying key factors that drive repeat purchases
+          for Nike’s D2C channel and proposing a tiered subscription model.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Clustering</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Regression</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">CX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <!-- Problem -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Business Problem</h3>
+      <p>
+        Nike wanted to understand the loyalty drivers behind its e-commerce customers
+        and quantify the impact of a membership-based retention program.
+      </p>
+    </article>
+
+    <!-- Approach -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Approach</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Designed a 1.5K-response Qualtrics survey plus in-depth interviews.</li>
+        <li>Performed K-means clustering on behavioural &amp; attitudinal variables.</li>
+        <li>Built logistic &amp; linear models to link cluster membership to repurchase probability.</li>
+      </ul>
+    </article>
+
+    <!-- Results -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Key Results</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Identified three high-value segments representing 48 % of revenue.</li>
+        <li>Proposed a tiered subscription that lifts retention by <strong>12 %</strong>.</li>
+        <li>Projected incremental revenue of <strong>$2 M / year</strong> at 80 % adoption.</li>
+      </ul>
+    </article>
+
+    <!-- Tools -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Tech &amp; Tools</h3>
+      <p>Python · scikit-learn · pandas · Qualtrics · Tableau</p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
+    <p class="text-center text-sm text-indigo-700">
+      &copy; 2025 Sameer Agarwal · <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
+    </p>
+  </footer>
+</body>
+</html>
 
