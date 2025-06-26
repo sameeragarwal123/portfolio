@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commodity Futures Forecast · Sameer Agarwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-gray-50 text-gray-900">
+  <!-- Top bar -->
+  <header class="py-6 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
+    <div class="max-w-5xl mx-auto flex items-center justify-between px-4">
+      <a href="index.html" class="text-indigo-100 hover:text-white text-sm">&larr; Back to portfolio</a>
+      <h1 class="text-lg font-semibold tracking-wide">Project Details</h1>
+      <span></span>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-white shadow-lg rounded-b-2xl">
+    <div class="max-w-5xl mx-auto p-8 md:flex md:gap-8">
+      <img src="images/futures_forecast.jpg" alt="Commodity Futures Forecast" class="w-full md:w-96 h-56 md:h-64 object-cover rounded-2xl mb-6 md:mb-0" />
+      <div>
+        <h2 class="text-3xl font-bold text-purple-700">Prediction of Futures Commodity Prices</h2>
+        <p class="mt-4 text-gray-700">
+          Time-series pipeline that predicts next-day settlement prices for oil and gold futures,
+          helping trading desks refine strategy and manage risk.
+        </p>
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Time&nbsp;Series</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Random&nbsp;Forest</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Finance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-12">
+    <!-- Problem -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Business Problem</h3>
+      <p>
+        Commodity desks rely on heuristics and subjective views, leading to missed entry points
+        and excess exposure. A robust, data-driven forecast improves position sizing and hedging.
+      </p>
+    </article>
+
+    <!-- Approach -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Approach</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Ingested <strong>1.5&nbsp;million</strong> daily contracts for crude oil and gold (CME).</li>
+        <li>Engineered technical indicators: rolling volatility, momentum, term-structure spread, volume spikes.</li>
+        <li>Benchmarked ARIMA, Prophet, Gradient Boosting; Random Forest delivered best out-of-sample MAE.</li>
+        <li>Performed walk-forward validation with expanding window to mimic live trading.</li>
+      </ul>
+    </article>
+
+    <!-- Results -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Key Results</h3>
+      <ul class="list-disc list-inside space-y-2">
+        <li>Random Forest reduced forecast error by <strong>11 %</strong> versus random-walk baseline.</li>
+        <li>Simulated strategy improved Sharpe ratio from 0.78 to <strong>1.06</strong>.</li>
+        <li>Risk team adopted model to set dynamic VaR limits, cutting tail-risk exposure 9 %.</li>
+      </ul>
+    </article>
+
+    <!-- Tools -->
+    <article>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Tech &amp; Tools</h3>
+      <p>Python · pandas · scikit-learn · statsmodels · Plotly</p>
+    </article>
+
+    <!-- PDF report -->
+    <section>
+      <h3 class="text-2xl font-semibold text-indigo-700 mb-4">Full Project Report (PDF)</h3>
+      <iframe
+        src="docs/futures_report.pdf"
+        title="Commodity Futures Forecast Report"
+        class="w-full h-[800px] rounded-lg shadow-md border"
+      ></iframe>
+      <p class="mt-4 text-sm">
+        Can’t see the preview?
+        <a href="docs/futures_report.pdf" class="underline text-indigo-600">Download the PDF</a>.
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
+    <p class="text-center text-sm text-indigo-700">
+      &copy; 2025 Sameer Agarwal&nbsp;&middot;
+      <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
+    </p>
+  </footer>
+</body>
+</html>
