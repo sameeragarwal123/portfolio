@@ -5,6 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sameer Agarwal Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* --- light-grey canvas -------------------------------------------------- */
+  body {
+    @apply bg-gray-100;               /* Tailwind utility via @apply        */
+  }
+
+  /* --- coloured edge design ---------------------------------------------- */
+  /* two fixed pseudo-layers so it works even when the page scrolls          */
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;                         /* full viewport */
+    pointer-events: none;             /* keep it non-interactive */
+    z-index: -1;                      /* sit behind all content */
+  }
+
+  /* top-left  + bottom-right glow */
+  body::before {
+    background:
+      /*   ⬅ top-left corner   */ radial-gradient(75vmax 75vmax at 0%   0%  , rgba(99, 102, 241, 0.18) 0%, transparent 70%),
+      /*   ➡ bottom-right      */ radial-gradient(60vmax 60vmax at 100% 100%, rgba(236,  72, 153, 0.14) 0%, transparent 70%);
+    background-repeat: no-repeat;
+  }
+
+  /* top-right + bottom-left glow */
+  body::after  {
+    background:
+      /*   ➡ top-right         */ radial-gradient(65vmax 65vmax at 100% 0%  , rgba(168,  85, 247, 0.16) 0%, transparent 70%),
+      /*   ⬅ bottom-left       */ radial-gradient(55vmax 55vmax at 0%   100%, rgba(139,  92, 246, 0.12) 0%, transparent 70%);
+    background-repeat: no-repeat;
+  }
+</style>
 </head>
 <body class="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-gray-50 text-gray-900">
   <header class="py-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white">
