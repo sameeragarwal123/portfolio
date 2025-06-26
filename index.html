@@ -27,18 +27,20 @@
   <main class="max-w-5xl mx-auto px-6 space-y-16 mt-16">
     <!-- ABOUT -->
     <section class="mx-auto max-w-5xl">
-      <div class="flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-md">
+      <div class="relative rounded-2xl shadow-md border-l-4 border-indigo-600/70 overflow-hidden shadow-md">
 
     <!-- left: text on dark background -->
-      <div class="md:w-5/12 bg-gradient-to-b from-indigo-700 to-purple-700 text-indigo-100 p-8 md:p-10">
-      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">About</h2>
-      <p class="italic leading-relaxed">
-        I’m a data scientist who blends business intuition with rigorous analytics to turn
-        raw data into strategic insights. With experience across finance, consulting and
-        product analytics, I build models that not only score high on accuracy but also
-        deliver measurable revenue impact.
-      </p>
+       <div class="absolute inset-y-0 left-0 flex items-center">
+      <div class="bg-white/70 backdrop-blur-sm rounded-r-2xl shadow-lg p-6 md:p-8 max-w-sm">
+        <h2 class="text-3xl md:text-4xl font-bold text-indigo-700 mb-4">About</h2>
+        <p class="text-base md:text-lg leading-relaxed italic text-gray-800">
+          I’m a data scientist who blends business intuition with rigorous analytics to turn
+          raw data into strategic insights. With experience across finance, consulting and
+          product analytics, I build models that not only score high on accuracy but also
+          deliver measurable revenue impact.
+        </p>
       </div>
+    </div>
 
     <!-- vertical accent line -->
       <div class="hidden md:block w-1 bg-indigo-600"></div>
