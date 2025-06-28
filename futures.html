@@ -42,23 +42,47 @@
 </header>
 
 
-  <!-- Hero -->
-  <section class="bg-white shadow-lg rounded-b-2xl">
-    <div class="max-w-5xl mx-auto p-8 md:flex md:gap-8">
-      <img src="images/futures_logo.jpg" alt="Commodity Futures Forecast" class="w-full md:w-96 h-56 md:h-64 object-cover rounded-2xl mb-6 md:mb-0" />
-      <div>
-        <h2 class="text-3xl font-bold text-purple-700">Prediction of Futures Commodity Prices</h2>
-        <p class="mt-4 text-gray-700">
-          Time-series pipeline that predicts next-day settlement prices for oil and gold futures,
-          helping trading desks refine strategy and manage risk.
-        </p>
-        <div class="flex flex-wrap gap-2 mt-4">
-          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Time&nbsp;Series</span>
-          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Random&nbsp;Forest</span>
-          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Finance</span>
-        </div>
-      </div>
+ <!-- HERO — Commodity Futures -->
+<section class="bg-white shadow-lg overflow-hidden">
+  <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
+
+    <!-- IMAGE column -->
+    <div class="relative h-56 md:h-full">
+      <img
+        src="images/futures_logo.jpg"
+        alt="Commodity Futures Forecast"
+        class="fade-right-soft absolute inset-0 w-full h-full object-cover"
+      />
     </div>
+
+    <!-- TEXT pane -->
+    <div class="relative ring-1 ring-indigo-100/60">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
+      <div class="relative z-10 p-5 md:p-6">
+        <!-- gradient headline -->
+        <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent">
+          Prediction&nbsp;of&nbsp;Futures&nbsp;Commodity&nbsp;Prices
+        </h2>
+
+        <!-- description -->
+        <p class="mt-3 md:text-lg leading-relaxed text-gray-800">
+          Built a time-series pipeline that predicts next-day settlement prices for oil and gold futures,
+          enabling trading desks to refine strategy and manage risk.
+        </p>
+
+            <!-- chips -->
+            <div class="flex flex-wrap gap-2 mt-4">
+              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Time&nbsp;Series</span>
+              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Random&nbsp;Forest</span>
+              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Finance</span>
+            </div>
+          </div>
+        </div>
+    
+      </div>
   </section>
 
   <!-- Content -->
