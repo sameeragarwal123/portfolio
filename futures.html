@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Commodity Futures Forecast · Sameer Agarwal</title>
   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+  /* 70 % is fully opaque, then it fades out to the right */
+  .fade-right {
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+            mask-image:  linear-gradient(to right, black 70%, transparent);
+  }   <!-- ← keep only this one closing brace -->
+     /* 0–60 % fully visible → gentle fade to 100 % */
+  .fade-right-soft {
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+            mask-image:  linear-gradient(to right, black 60%, transparent 100%);
+  }
+  </style>
 </head>
 
 <body class="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-gray-50 text-gray-900">
