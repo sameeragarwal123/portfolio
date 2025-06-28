@@ -36,46 +36,50 @@
 
 
   <!-- PROJECT CARD — Nike -->
-    <section class="bg-white shadow-lg rounded-b-2xl">
-      <div class="max-w-5xl mx-auto p-8 md:flex md:gap-8 md:items-stretch">
-    
-        <!-- Image column fills all available height & fades on the right -->
-        <div  class="relative w-full md:w-96 lg:w-[28rem] rounded-2xl overflow-hidden">
-          <img
-            src="images/nike_logo.jpg"
-            alt="Nike Retention"
-            class="fade-right absolute inset-0 w-full h-full object-cover"
-          />
+   <section class="bg-white shadow-lg rounded-b-2xl">
+  <!-- turn into a 2-column grid on md+, pl-0 removes the left padding -->
+    <div class="max-w-5xl mx-auto p-6 md:pl-0 md:grid md:grid-cols-[22rem_1fr] md:gap-8">
+
+    <!-- LEFT: full-height image, fades toward the text -->
+    <div class="relative rounded-l-2xl overflow-hidden">
+      <img
+        src="images/nike_logo.jpg"
+        alt="Nike Retention"
+        class="fade-right w-full h-full object-cover"
+      />
+    </div>
+
+    <!-- RIGHT: info pane with all your original styling -->
+    <div class="relative rounded-r-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+
+      <!-- frosted gradient backdrop -->
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
+      <!-- content (slimmer padding) -->
+      <div class="relative z-10 p-4 md:p-6">
+        <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent">
+          Nike Customer Retention &amp; Commitment Analysis
+        </h2>
+
+        <p class="mt-3 md:mt-4 md:text-lg leading-relaxed text-gray-800">
+          Conducted a deep-dive consumer-insights study for Nike, collecting primary data
+          through a Qualtrics survey and complementary qualitative interviews. The analysis
+          segmented customers, pinpointed the factors that encourage repeat purchases on
+          Nike’s D2C channel, and recommended a tiered subscription model to strengthen
+          retention.
+        </p>
+
+        <div class="flex flex-wrap gap-2 mt-4">
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Clustering</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Regression</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Customer Segmentation</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Qualitative Analysis</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Quantitative Analysis</span>
+          <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Survey</span>
         </div>
-    
-        <!-- INFO PANE with the frosted gradient you already had -->
-        <div class="relative flex-1 rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
-    
-          <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
-    
-          <div class="relative z-10 p-6 md:p-8">
-            <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
-                       bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
-                       bg-clip-text text-transparent">
-              Nike Customer Retention &amp; Commitment Analysis
-            </h2>
-    
-            <p class="mt-4 md:text-xl leading-relaxed text-gray-800">
-              Conducted a deep-dive consumer-insights study for Nike, collecting primary data through
-              a Qualtrics survey and complementary qualitative interviews. The analysis segmented
-              customers, pinpointed the factors that encourage repeat purchases on Nike’s D2C channel,
-              and recommended a tiered subscription model to strengthen retention.
-            </p>
-    
-            <div class="flex flex-wrap gap-2 mt-4">
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Clustering</span>
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Regression</span>
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Customer Segmentation</span>
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Qualitative Analysis</span>
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Quantitative Analysis</span>
-              <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Survey</span>
-            </div>
-          </div>
+        </div>
         </div>
       </div>
     </section>
