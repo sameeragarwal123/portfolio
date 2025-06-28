@@ -5,27 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nike Retention Analysis · Sameer Agarwal</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* 70 % is fully opaque, then it fades out to the right */
+  .fade-right {
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+            mask-image:  linear-gradient(to right, black 70%, transparent);
+  }   <!-- ← keep only this one closing brace -->
+  </style>
 </head>
-
-<header class="relative overflow-hidden shadow-lg">
-  <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
-  <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
-
-  <!-- CENTER the flex children; back button is absolutely positioned -->
-  <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
-    <!-- back button, anchored left -->
-    <a href="index.html"
-       class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white
-              bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
-      &larr; Back to portfolio
-    </a>
-
-    <!-- perfectly centered title -->
-    <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">
-      Project&nbsp;Details
-    </h1>
-  </div>
-</header>
+<body>
+  <header class="relative overflow-hidden shadow-lg">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
+    <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+  
+    <!-- CENTER the flex children; back button is absolutely positioned -->
+    <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
+      <!-- back button, anchored left -->
+      <a href="index.html"
+         class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white
+                bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
+        &larr; Back to portfolio
+      </a>
+  
+      <!-- perfectly centered title -->
+      <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">
+        Project&nbsp;Details
+      </h1>
+    </div>
+    </header>
 
 
   <!-- Hero -->
