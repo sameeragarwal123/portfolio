@@ -1,1 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce Seasonality · Sameer Agarwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* image–fade helpers */
+    .fade-right      { -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+                             mask-image:   linear-gradient(to right, black 70%, transparent); }
+    .fade-right-soft { -webkit-mask-image: linear-gradient(to right, black 60%, transparent);
+                             mask-image:   linear-gradient(to right, black 60%, transparent); }
+  </style>
+</head>
+
+<body class="text-gray-900">
+
+  <!-- ░░░ HEADER ░░░ -->
+  <header class="relative overflow-hidden shadow-lg">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
+    <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
+      <a href="index.html"
+         class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white
+                bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
+        &larr; Back to portfolio
+      </a>
+      <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">
+        Project&nbsp;Details
+      </h1>
+    </div>
+  </header>
+
+  <!-- ░░░ HERO ░░░ -->
+  <section class="bg-white shadow-lg overflow-hidden">
+    <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
+
+      <!-- hero image (24 rem wide on ≥ md) -->
+      <div class="relative h-56 md:h-full">
+        <!-- replace with a 3 : 2 or 4 : 3 banner -->
+        <img src="images/ECommerce.jpg"
+             alt="E-commerce Seasonality"
+             class="fade-right-soft absolute inset-0 w-full h-full object-cover" />
+      </div>
+
+      <!-- hero text card -->
+      <div class="relative ring-1 ring-indigo-100/60">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
+        <div class="relative z-10 p-5 md:p-6">
+          <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
+                     bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                     bg-clip-text text-transparent">
+            E-Commerce&nbsp;Seasonal &amp; Geographic&nbsp;Trends
+          </h2>
+
+          <p class="mt-3 md:text-lg leading-relaxed text-gray-800">
+            Explored how seasonality and customer geolocation influence order-cancellation rates
+            for a global sports-retail dataset&nbsp;(180 K+ orders, 2016 – 2018).  
+            Merged open-data, engineered seasonal features by hemisphere, and benchmarked
+            statistical &amp; machine-learning models to pinpoint drivers of lost revenue.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">ANOVA</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Logistic&nbsp;Regression</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Robust&nbsp;OLS</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">K-Means&nbsp;Clustering</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Seasonality</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Geolocation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ CASE-STUDY CONTENT ░░░ -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- Business Problem -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Business&nbsp;Problem
+        </h3>
+        <p class="text-base md:text-lg leading-relaxed text-gray-800">
+          High cancellation rates erode margins and distort inventory planning.  
+          Industry belief links cancellations to seasonal demand swings and the
+          logistical challenge of serving dispersed global customers—but evidence for
+          this link in sports e-commerce was limited.
+        </p>
+      </article>
+    </section>
+
+    <!-- Approach -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Approach
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li>Extracted season from order-date &amp; hemisphere; created 4-season label.</li>
+          <li>Described cancellation ratios by 23 global regions and 4 seasons.</li>
+          <li>Ran two-way&nbsp;ANOVA to test joint effects; built heteroscedastic-robust
+              OLS, logistic regression &amp; K-means (k = 3) for deeper pattern mining.</li>
+          <li>Validated assumptions (normality, variance homogeneity, multicollinearity)
+              and pruned leverage outliers.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Key Results -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Key&nbsp;Results
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li>Seasonality <em>not</em> significant in any model (p&nbsp;&gt;&nbsp;0.80).</li>
+          <li>Region explains <strong>46&nbsp;%</strong> of cancellation variance (R² of OLS);  
+              highest risk: Canada; lowest: Central&nbsp;Asia.</li>
+          <li>Logistic model odds: Central&nbsp;Africa ↘  1.3 ×, West&nbsp;Africa ↘  1.2 × vs baseline.</li>
+          <li>K-means flagged 1 high-risk cluster (avg cancel &gt; 11%), guiding targeted CX fixes.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Tech & Tools -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Tech&nbsp;&amp;&nbsp;Tools
+        </h3>
+        <p class="text-base md:text-lg text-gray-800 leading-relaxed">
+          Python · pandas · scikit-learn · statsmodels · Tableau · LA Open Data API
+        </p>
+      </article>
+    </section>
+
+    <!-- PDF report -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Full Project&nbsp;Report&nbsp;(PDF)
+        </h3>
+
+        <!-- change src if you store the report elsewhere -->
+        <iframe
+          src="docs/Final Paper (1).pdf"
+          title="E-commerce Seasonality Paper"
+          class="w-full h-[600px] sm:h-[700px] md:h-[800px] rounded-lg shadow-md border"
+        ></iframe>
+
+        <p class="mt-4 text-sm text-gray-700">
+          Can’t see the preview?
+          <a href="docs/ecommerce_report.pdf" class="underline text-indigo-600">Download the PDF</a>.
+        </p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
+    <p class="text-center text-sm text-indigo-700">
+      &copy; 2025 Sameer Agarwal&nbsp;&middot;&nbsp;
+      <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
+    </p>
+  </footer>
+</body>
+</html>
 
