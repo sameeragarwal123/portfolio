@@ -7,27 +7,34 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <style>
-    /* hero-image fade */
-    .fade-right-soft{
-      -webkit-mask-image:linear-gradient(to right, black 60%, transparent);
-              mask-image:linear-gradient(to right, black 60%, transparent);
-    }
+  /* 70 % fully opaque → fades to transparent */
+  .fade-right {
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+            mask-image:  linear-gradient(to right, black 70%, transparent);
+  }   /* keep only this one closing brace */
+
+  /* 0 – 60 % fully visible → gentle fade */
+  .fade-right-soft {
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+            mask-image:  linear-gradient(to right, black 60%, transparent 100%);
+  }
   </style>
 </head>
 
-<body class="text-gray-900">
-
+<body>
   <!-- ░░ HEADER ░░ -->
   <header class="relative overflow-hidden shadow-lg">
     <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
     <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 
+    <!-- centered title + back button -->
     <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
       <a href="index.html"
          class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white
                 bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
         &larr; Back to portfolio
       </a>
+
       <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">
         Project&nbsp;Details
       </h1>
@@ -38,14 +45,15 @@
   <section class="bg-white shadow-lg overflow-hidden">
     <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
 
-      <!-- hero image -->
+      <!-- image -->
       <div class="relative h-56 md:h-full">
-        <img src="images/rain_logo.jpg"  <!-- ◀ replace -->
-             alt="Mumbai Weather"
-             class="fade-right-soft absolute inset-0 w-full h-full object-cover" />
+        <img
+          src="images/rain_logo.jpg"        <!-- ◀ replace with your banner -->
+          alt="Mumbai Weather"
+          class="fade-right-soft absolute inset-0 w-full h-full object-cover" />
       </div>
 
-      <!-- hero text card -->
+      <!-- text card -->
       <div class="relative ring-1 ring-indigo-100/60">
         <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
 
@@ -53,36 +61,35 @@
           <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
                      bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
                      bg-clip-text text-transparent">
-            Mumbai&nbsp;Temperature &amp;<br class="hidden sm:block">
-            Rain-Prediction&nbsp;Models
+            Mumbai Temperature &amp; Rain-Prediction
           </h2>
 
           <p class="mt-3 md:text-lg leading-relaxed text-gray-800">
-            Forecasted daily temperature and probability of rainfall using eight
-            years of Mumbai weather data. Combined Rob­ust&nbsp;Regression
-            (R²&nbsp;0.838) for temperature and a Neural-Network classifier
-            (90 % accuracy) for precipitation—insights that guide logistics,
-            tourism and energy planning.
+            Built next-day forecasts for temperature (robust regression, R² 0.84) and
+            rain probability (neural-network classifier, 90 % accuracy) using eight
+            years of daily Mumbai weather data—insights that let tourism and logistics
+            firms plan staff, inventory and energy usage.
           </p>
 
           <div class="flex flex-wrap gap-2 mt-4">
-            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Lag&nbsp;Regression</span>
             <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Neural&nbsp;Network</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Robust&nbsp;Regression</span>
             <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Time-Series</span>
-            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Binary&nbsp;Classifier</span>
-            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Standardization</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Weather&nbsp;Data</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Lag&nbsp;Features</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ░░ MAIN CONTENT ░░ -->
+  <!-- ░░ CONTENT ░░ -->
   <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
 
-    <!-- Business Problem -->
+    <!-- BUSINESS PROBLEM -->
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
@@ -90,16 +97,17 @@
           Business&nbsp;Problem
         </h3>
         <p class="text-base md:text-lg leading-relaxed text-gray-800">
-          Weather swings in Mumbai disrupt transport, retail demand and energy
-          usage. Accurate next-day forecasts of temperature and rain probability
-          help firms optimise staffing, inventory and advertising spend.
+          Mumbai’s volatile monsoon disrupts transport, retail demand and energy
+          usage. Accurate next-day predictions of temperature and rainfall help
+          companies optimise staffing, logistics and advertising spend.
         </p>
       </article>
     </section>
 
-    <!-- Approach -->
+    <!-- APPROACH -->
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
@@ -107,21 +115,18 @@
           Approach
         </h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
-          <li>Daily dataset: temperature, dew point, humidity, sea-level
-              pressure, wind speed/direction &amp; precipitation flag.</li>
-          <li>Encoded precipitation&nbsp;(Yes / No)&nbsp;→ 1 / 0; created 1-
-              and 2-day lags for all predictors.</li>
-          <li>Temperature: stepwise robust OLS on lagged features (R² 0.838).</li>
-          <li>Rain: 7-feature neural net (2 hidden layers, 20 epochs) using
-              min-max scaling; evaluated with accuracy, sensitivity,
-              specificity, PPV, NPV.</li>
+          <li>Ingested eight-year daily series: temperature, humidity, pressure, wind speed, precipitation flag.</li>
+          <li>Created one- and two-day lags for all predictors; encoded rain Yes/No to 1/0.</li>
+          <li>Temperature: stepwise robust OLS on lagged features (R² 0.84).</li>
+          <li>Rain: 7-feature neural net (2 hidden layers, 20 epochs) with min-max scaling; evaluated accuracy, sensitivity, specificity.</li>
         </ul>
       </article>
     </section>
 
-    <!-- Key Results -->
+    <!-- KEY RESULTS -->
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
@@ -129,19 +134,17 @@
           Key&nbsp;Results
         </h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
-          <li>Regression explains <strong>83.8 %</strong> of temperature variance
-              using 10 significant lagged predictors.</li>
-          <li>Neural-network rain model: <strong>90 % accuracy</strong>,
-              87 % sensitivity, 92 % specificity.</li>
-          <li>Dashboard gives probability of rain + temp forecast to hotel
-              and tourism partners 24 h ahead.</li>
+          <li>Regression explains <strong>83.8 %</strong> of temperature variance with 10 significant lagged predictors.</li>
+          <li>Neural-network rain model: <strong>90 % accuracy</strong>, 87 % sensitivity, 92 % specificity.</li>
+          <li>Dashboard delivers probability of rain + temperature forecast to partners 24 h in advance.</li>
         </ul>
       </article>
     </section>
 
-    <!-- Tech & Tools -->
+    <!-- TECH & TOOLS -->
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
@@ -154,9 +157,10 @@
       </article>
     </section>
 
-    <!-- PDF Report -->
+    <!-- PDF REPORT -->
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
@@ -179,11 +183,10 @@
 
   </main>
 
-  <!-- ░░ FOOTER ░░ -->
+  <!-- FOOTER -->
   <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
     <p class="text-center text-sm text-indigo-700">
-      &copy; 2025&nbsp;Sameer Agarwal&nbsp;&middot;&nbsp;
-      <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
+      &copy; 2025 Sameer Agarwal · <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
     </p>
   </footer>
 </body>
