@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=1280, initial-scale=1">
   <title>Spotify Hit-Prediction · Sameer Agarwal</title>
   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+  /* 70 % opaque → fade out */
+  .fade-right{
+    -webkit-mask-image:linear-gradient(to right,black 70%,transparent);
+            mask-image:linear-gradient(to right,black 70%,transparent);
+  }
+  /* soft version */
+  .fade-right-soft{
+    -webkit-mask-image:linear-gradient(to right,black 60%,transparent);
+            mask-image:linear-gradient(to right,black 60%,transparent);
+  }
+  body { min-width: 1280px; }
+  </style>
 </head>
 
 <body class="min-h-screen bg-gradient-to-b from-indigo-50 via-purple-50 to-gray-50 text-gray-900">
