@@ -43,14 +43,11 @@
   <!-- ░░ HEADER WITH VIDEO BACKGROUND ░░ -->
   <header class="relative py-12 text-white overflow-hidden">
   
-    <video
-      src="images/bg_video.mp4"  
-      class="absolute inset-0 w-full h-full object-cover"
-      autoplay
-      muted
-      loop
-      playsinline               
-    ></video>
+    <video autoplay muted loop playsinline
+       class="absolute inset-0 w-full h-full object-cover">
+      <source src="images/bg_video-mobile.mp4" media="(max-width: 767px)" type="video/mp4">
+      <source src="images/bg_video-desktop.mp4" type="video/mp4">
+    </video>
   
     <!-- optional dark/colour overlay for readability -->
     <div class="absolute inset-0 bg-gradient-to-r from-indigo-800/80 to-purple-800/80"></div>
