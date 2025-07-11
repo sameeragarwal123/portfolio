@@ -1,1 +1,103 @@
+<section class="bg-white shadow-lg overflow-hidden rounded-2xl mt-20">
+  <div class="max-w-5xl mx-auto p-6 md:p-8 space-y-12">
 
+    <!-- Heading -->
+    <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
+               bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+               bg-clip-text text-transparent text-center">
+      Tableau Project &nbsp;|&nbsp; Sales&nbsp;Performance​&nbsp;Dashboards
+    </h2>
+
+    <!-- INTRODUCTION -->
+    <article>
+      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-2">Introduction</h3>
+      <p class="text-base md:text-lg leading-relaxed text-gray-800">
+        This project delivers <strong>two interactive Tableau dashboards</strong>—one for Sales
+        Performance and one for Customer Insights—so sales managers and executives can monitor
+        KPIs, spot trends, and drill into product-level performance without writing a single query.
+      </p>
+    </article>
+
+    <!-- DASHBOARD PURPOSE -->
+    <article>
+      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-2">Dashboard Purpose</h3>
+      <p class="text-base md:text-lg leading-relaxed text-gray-800">
+        The Sales dashboard provides an at-a-glance view of year-over-year sales, profit, and
+        quantity. The goal is to highlight monthly and weekly fluctuations so stakeholders can
+        quickly answer: <em>“Where are we outperforming? Where do we need to intervene?”</em>
+      </p>
+    </article>
+
+    <!-- KEY REQUIREMENTS -->
+    <article>
+      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-4">Key Requirements&nbsp;&amp;&nbsp;How I Solved Them</h3>
+
+      <ul class="space-y-6 text-gray-800 text-base md:text-lg leading-relaxed">
+
+        <li>
+          <span class="font-medium text-indigo-700">KPI Overview</span><br>
+          • Built a high-level tile for each KPI (Sales, Profit, Quantity) that compares
+          <em>current&nbsp;YTD vs. prior&nbsp;YTD</em> and uses colour-coded arrows to flag
+          positive or negative change.
+        </li>
+
+        <li>
+          <span class="font-medium text-indigo-700">Sales Trends</span><br>
+          • Added an interactive line chart with dual-year overlay.<br>
+          • Included dynamic “best / worst month” call-outs so spikes are visible the moment
+          the data refreshes.
+        </li>
+
+        <li>
+          <span class="font-medium text-indigo-700">Product Sub-Category Comparison</span><br>
+          • Used a butterfly bar to show Sales vs. Profit side-by-side for every sub-category.<br>
+          • Embedded tooltips reveal profit margin %, turning the viz into a quick diagnostic
+          of low-margin products.
+        </li>
+
+        <li>
+          <span class="font-medium text-indigo-700">Weekly Sales&nbsp;&amp;&nbsp;Profit</span><br>
+          • Constructed a heat-map calendar that benchmarks each week against the
+          <em>current-year average</em>—weeks above the line pop in indigo, below-average weeks in
+          muted grey.<br>
+          • Added a parameter toggle so users can switch between absolute $ values and % deviation.
+        </li>
+
+      </ul>
+    </article>
+
+    <!-- SCREENSHOTS GALLERY -->
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- KPI Overview -->
+      <figure class="rounded-2xl overflow-hidden shadow-md">
+        <img src="images/sales_kpi.png" alt="KPI Overview dashboard tile"
+             class="w-full h-56 object-cover">
+        <figcaption class="p-2 text-center text-sm text-gray-600">KPI&nbsp;Overview</figcaption>
+      </figure>
+
+      <!-- Sales Trends -->
+      <figure class="rounded-2xl overflow-hidden shadow-md">
+        <img src="images/sales_trends.png" alt="Monthly sales trends"
+             class="w-full h-56 object-cover">
+        <figcaption class="p-2 text-center text-sm text-gray-600">Monthly&nbsp;Sales&nbsp;Trends</figcaption>
+      </figure>
+
+      <!-- Product Sub-Category Comparison -->
+      <figure class="rounded-2xl overflow-hidden shadow-md">
+        <img src="images/subcategory_vs_profit.png" alt="Product subcategory comparison"
+             class="w-full h-56 object-cover">
+        <figcaption class="p-2 text-center text-sm text-gray-600">Sub-Category&nbsp;vs&nbsp;Profit</figcaption>
+      </figure>
+    </div>
+
+    <!-- CALL-TO-ACTION -->
+    <div class="text-center mt-10">
+      <a href="##link_to_interactive" target="_blank"
+         class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium
+                px-6 py-3 rounded-full shadow-lg transition">
+        Explore the Interactive Tableau Dashboard
+      </a>
+    </div>
+
+  </div>
+</section>
