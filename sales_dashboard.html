@@ -1,95 +1,169 @@
-<section class="bg-white shadow-lg overflow-hidden rounded-2xl mt-20">
-  <div class="max-w-5xl mx-auto p-6 md:p-8 space-y-12">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280, initial-scale=1">
+  <title>Sales Performance Dashboards · Sameer Agarwal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* desktop‑first mask helpers (same as other project pages) */
+  .fade-right {
+    -webkit-mask-image: linear-gradient(to right, black 70%, transparent);
+            mask-image:  linear-gradient(to right, black 70%, transparent);
+  }
+  .fade-right-soft {
+    -webkit-mask-image: linear-gradient(to right, black 60%, transparent 100%);
+            mask-image:  linear-gradient(to right, black 60%, transparent 100%);
+  }
+  /* lock desktop width so the page scales 1:1 on mobile */
+  body { min-width: 1280px; }
+  </style>
+</head>
+<body>
+  <!-- ░░ HEADER ░░ -->
+  <header class="relative overflow-hidden shadow-lg">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
+    <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
 
-    <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
-               bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
-               bg-clip-text text-transparent text-center">
-      Tableau Project &nbsp;|&nbsp; Sales&nbsp;Performance​&nbsp;Dashboards
-    </h2>
-
-    <article>
-      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-2">Introduction</h3>
-      <p class="text-base md:text-lg leading-relaxed text-gray-800">
-        This project delivers <strong>two interactive Tableau dashboards</strong>—one for Sales
-        Performance and one for Customer Insights—so sales managers and executives can monitor
-        KPIs, spot trends, and drill into product-level performance without writing a single query.
-      </p>
-    </article>
-
-    <article>
-      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-2">Dashboard Purpose</h3>
-      <p class="text-base md:text-lg leading-relaxed text-gray-800">
-        The Sales dashboard provides an at-a-glance view of year-over-year sales, profit, and
-        quantity. The goal is to highlight monthly and weekly fluctuations so stakeholders can
-        quickly answer: <em>“Where are we outperforming? Where do we need to intervene?”</em>
-      </p>
-    </article>
-
-    <article>
-      <h3 class="text-xl md:text-2xl font-semibold text-indigo-800 mb-4">Key Requirements&nbsp;&amp;&nbsp;How I Solved Them</h3>
-
-      <ul class="space-y-6 text-gray-800 text-base md:text-lg leading-relaxed">
-
-        <li>
-          <span class="font-medium text-indigo-700">KPI Overview</span><br>
-          • Built a high-level tile for each KPI (Sales, Profit, Quantity) that compares
-          <em>current&nbsp;YTD vs. prior&nbsp;YTD</em> and uses colour-coded arrows to flag
-          positive or negative change.
-        </li>
-
-        <li>
-          <span class="font-medium text-indigo-700">Sales Trends</span><br>
-          • Added an interactive line chart with dual-year overlay.<br>
-          • Included dynamic “best / worst month” call-outs so spikes are visible the moment
-          the data refreshes.
-        </li>
-
-        <li>
-          <span class="font-medium text-indigo-700">Product Sub-Category Comparison</span><br>
-          • Used a butterfly bar to show Sales vs. Profit side-by-side for every sub-category.<br>
-          • Embedded tooltips reveal profit margin %, turning the viz into a quick diagnostic
-          of low-margin products.
-        </li>
-
-        <li>
-          <span class="font-medium text-indigo-700">Weekly Sales&nbsp;&amp;&nbsp;Profit</span><br>
-          • Constructed a heat-map calendar that benchmarks each week against the
-          <em>current-year average</em>—weeks above the line pop in indigo, below-average weeks in
-          muted grey.<br>
-          • Added a parameter toggle so users can switch between absolute $ values and % deviation.
-        </li>
-
-      </ul>
-    </article>
-
-    <div class="grid gap-6 md:grid-cols-3">
-
-      <figure class="rounded-2xl overflow-hidden shadow-md">
-        <img src="images/sales_kpi.png" alt="KPI Overview dashboard tile"
-             class="w-full h-56 object-cover">
-        <figcaption class="p-2 text-center text-sm text-gray-600">KPI&nbsp;Overview</figcaption>
-      </figure>
-
-      <figure class="rounded-2xl overflow-hidden shadow-md">
-        <img src="images/sales_trends.png" alt="Monthly sales trends"
-             class="w-full h-56 object-cover">
-        <figcaption class="p-2 text-center text-sm text-gray-600">Monthly&nbsp;Sales&nbsp;Trends</figcaption>
-      </figure>
-
-      <figure class="rounded-2xl overflow-hidden shadow-md">
-        <img src="images/subcategory_vs_profit.png" alt="Product subcategory comparison"
-             class="w-full h-56 object-cover">
-        <figcaption class="p-2 text-center text-sm text-gray-600">Sub-Category&nbsp;vs&nbsp;Profit</figcaption>
-      </figure>
-    </div>
-
-    <div class="text-center mt-10">
-      <a href="##link_to_interactive" target="_blank"
-         class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-medium
-                px-6 py-3 rounded-full shadow-lg transition">
-        Explore the Interactive Tableau Dashboard
+    <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
+      <a href="index.html"
+         class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
+        &larr; Back to portfolio
       </a>
+      <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">Project&nbsp;Details</h1>
     </div>
+  </header>
 
-  </div>
-</section>
+  <!-- ░░ HERO ░░ -->
+  <section class="bg-white shadow-lg overflow-hidden">
+    <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
+      <!-- IMAGE -->
+      <div class="relative h-56 md:h-full">
+        <img src="images/sales_dashboard_banner.jpg" alt="Sales Performance Dashboards" class="fade-right-soft absolute inset-0 w-full h-full object-cover" />
+      </div>
+
+      <!-- TEXT card -->
+      <div class="relative ring-1 ring-indigo-100/60">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
+        <div class="relative z-10 p-5 md:p-6">
+          <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+            Sales Performance Dashboards (Tableau)
+          </h2>
+          <p class="mt-3 md:text-lg leading-relaxed text-gray-800">
+            Built a pair of Tableau dashboards that let sales managers and executives track KPIs, uncover trends, and compare product sub‑categories — all refreshed automatically from the data warehouse.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Tableau</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">KPI&nbsp;Tiles</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Sales&nbsp;Trends</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Product&nbsp;Comparison</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Weekly&nbsp;Heat&nbsp;Map</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ MAIN CONTENT ░░ -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- BUSINESS PROBLEM -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          Business&nbsp;Problem
+        </h3>
+        <p class="text-base md:text-lg leading-relaxed text-gray-800">
+          The sales leadership team needed real‑time visibility into revenue, profit, and quantity sold — broken out by month, week, and product sub‑category — to make faster merchandising and budgeting decisions.
+        </p>
+      </article>
+    </section>
+
+    <!-- APPROACH -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          Approach
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li>Gathered requirements and translated them into four key dashboard sections: KPI Overview, Sales Trends, Product Sub‑Category Comparison, and Weekly Performance.</li>
+          <li>Modelled the data in Snowflake and exposed a clean star schema to Tableau for self‑service refreshes.</li>
+          <li>Designed consistent colour scales and tooltips so users can spot anomalies at a glance.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- KEY REQUIREMENTS & SOLUTIONS -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          Key&nbsp;Requirements&nbsp;&amp;&nbsp;Solutions
+        </h3>
+        <ul class="space-y-4 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li><span class="font-medium text-indigo-700">KPI Overview</span> — Dynamic tiles compare current‑year and prior‑year totals with colour‑coded arrows.</li>
+          <li><span class="font-medium text-indigo-700">Sales Trends</span> — Dual‑year overlay line chart plus auto‑highlight of best & worst months.</li>
+          <li><span class="font-medium text-indigo-700">Product Sub‑Category Comparison</span> — Butterfly bar chart juxtaposes sales and profit; tooltips reveal margin %.</li>
+          <li><span class="font-medium text-indigo-700">Weekly Performance Heat‑Map</span> — Calendar view benchmarks each week against the YTD average.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- SCREENSHOTS GALLERY -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <div class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-6">
+          Dashboard Screenshots
+        </h3>
+        <div class="grid gap-6 md:grid-cols-3">
+          <figure class="rounded-2xl overflow-hidden shadow-md">
+            <img src="images/sales_kpi.png" alt="KPI Overview" class="w-full h-56 object-cover">
+            <figcaption class="p-2 text-center text-sm text-gray-600">KPI&nbsp;Overview</figcaption>
+          </figure>
+          <figure class="rounded-2xl overflow-hidden shadow-md">
+            <img src="images/sales_trends.png" alt="Monthly Sales Trends" class="w-full h-56 object-cover">
+            <figcaption class="p-2 text-center text-sm text-gray-600">Monthly&nbsp;Trends</figcaption>
+          </figure>
+          <figure class="rounded-2xl overflow-hidden shadow-md">
+            <img src="images/subcategory_vs_profit.png" alt="Sub‑Category Comparison" class="w-full h-56 object-cover">
+            <figcaption class="p-2 text-center text-sm text-gray-600">Sub‑Category&nbsp;Comparison</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH & TOOLS -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          Tech&nbsp;&amp;&nbsp;Tools
+        </h3>
+        <p class="text-base md:text-lg text-gray-800 leading-relaxed">Tableau · Snowflake · SQL · Excel · Python (data prep)</p>
+      </article>
+    </section>
+
+    <!-- PDF REPORT (USER STORY) -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 bg-clip-text text-transparent mb-4">
+          Full&nbsp;User&nbsp;Story&nbsp;(PDF)
+        </h3>
+        <iframe src="docs/Sales_Performance_User_Story.pdf" title="Sales Performance User Story" class="w-full h-[600px] sm:h-[700px] md:h-[800px] rounded-lg shadow-md border"></iframe>
+        <p class="mt-4 text-sm text-gray-700">Can’t see the preview? <a href="docs/Sales_Performance_User_Story.pdf" class="underline text-indigo-600" download>Download the PDF</a>.</p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
+    <p class="text-center text-sm text-indigo-700">&copy; 2025 Sameer Agarwal · <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a></p>
+  </footer>
+</body>
+</html>
