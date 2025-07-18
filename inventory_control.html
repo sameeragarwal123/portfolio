@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1280, initial-scale=1">
+  <title>Inventory Control Management · Sameer Agarwal</title>
+  <link rel="stylesheet" href="assets/tailwind.min.css"><!-- if you switched to a local build -->
+  <style>
+    .fade-right       { -webkit-mask-image:linear-gradient(to right,black 70%,transparent); mask-image:linear-gradient(to right,black 70%,transparent); }
+    .fade-right-soft  { -webkit-mask-image:linear-gradient(to right,black 60%,transparent);   mask-image:linear-gradient(to right,black 60%,transparent); }
+    body{ min-width:1280px; }
+  </style>
+</head>
+<body>
+  <!-- ░░ HEADER ░░ -->
+  <header class="relative overflow-hidden shadow-lg">
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600"></div>
+    <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+
+    <div class="relative z-10 max-w-5xl mx-auto flex items-center justify-center py-6">
+      <a href="index.html"
+         class="absolute left-4 inline-flex items-center gap-2 text-base font-medium text-indigo-100 hover:text-white
+                bg-white/10 hover:bg-white/15 px-4 py-2 rounded-full transition">
+        &larr; Back to portfolio
+      </a>
+      <h1 class="text-xl md:text-4xl font-serif font-bold tracking-wide text-white">
+        Project&nbsp;Details
+      </h1>
+    </div>
+  </header>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="bg-white shadow-lg overflow-hidden">
+    <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
+      <!-- image -->
+      <div class="relative h-56 md:h-full">
+        <img src="images/inventory_control.jpeg" 
+             alt="Inventory Control Management"
+             class="fade-right-soft absolute inset-0 w-full h-full object-cover">
+      </div>
+
+      <!-- text -->
+      <div class="relative ring-1 ring-indigo-100/60">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+
+        <div class="relative z-10 p-5 md:p-6">
+          <h2 class="text-3xl md:text-4xl font-serif font-extrabold tracking-tight
+                     bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                     bg-clip-text text-transparent">
+            Inventory Control&nbsp;Management
+          </h2>
+
+          <p class="mt-3 md:text-lg leading-relaxed text-gray-800">
+            Built a full inventory-performance toolkit: flagged risky SKUs, quantified excess
+            holding cost, simulated demand, and optimised reorder points &amp; economic order
+            quantities—turning 50 K $ of dead stock into actionable cash.
+          </p>
+
+          <div class="flex flex-wrap gap-2 mt-4">
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">ABC&nbsp;Analysis</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">EOQ&nbsp;/ ROP</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Safety&nbsp;Stock</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Python&nbsp;Scripts</span>
+            <span class="px-2 py-1 text-xs bg-indigo-100 text-indigo-800 rounded-full">Tableau</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ MAIN CONTENT ░░ -->
+  <main class="max-w-5xl mx-auto px-6 py-12 space-y-16">
+
+    <!-- Problem -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Business&nbsp;Problem
+        </h3>
+        <p class="text-base md:text-lg leading-relaxed text-gray-800">
+          The company stocked hundreds of SKUs without a structured policy. Some items
+          ran out (risking lost sales and customer trust) while many others sat dormant,
+          tying up capital and warehousing cost. Management needed clear-cut triggers
+          for when to reorder and how much to buy.
+        </p>
+      </article>
+    </section>
+
+    <!-- Approach -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Approach
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li><strong>Data prep &feature engineering</strong>&nbsp;— fixed dtypes, merged lead-time fields, created DoS, annual&nbsp;sales&nbsp;value, holding-cost metrics.</li>
+          <li><strong>ABC segmentation</strong>&nbsp;— flagged top 20 % SKUs (“A”) generating 80 % of revenue.</li>
+          <li><strong>Risk &amp; cost quantification</strong>&nbsp;— computed opportunity vs. excess-holding cost per SKU.</li>
+          <li><strong>Policy optimisation</strong>&nbsp;— used Poisson variance for safety stock, derived reorder points,
+              calculated EOQ at $300/PO, 20 % holding rate.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Key Results -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Key&nbsp;Results
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li><strong>$50 K</strong> of excess stock pinpointed in B/C items.</li>
+          <li><strong>0</strong> stock-out opportunity cost: data confirmed over- not under-stocking.</li>
+          <li>EOQs 3–10 × larger than reorder points revealed a mis-set $300 ordering-cost assumption.</li>
+          <li>Simulated a 10–15 % inventory reduction by right-sizing ordering cost and service levels.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Recommendations
+        </h3>
+        <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
+          <li><strong>Raise reorder points</strong> on A-class SKUs whose DoS &lt; lead time.</li>
+          <li><strong>Freeze new orders</strong> on C-items with DoS &gt; 90 days; clear stock via markdowns / kits.</li>
+          <li><strong>Audit real ordering cost</strong> (likely $100-150) → smaller EOQ → 10 % lower inventory.</li>
+          <li><strong>Target service levels</strong>: 95 % (A) / 90 % (B) / 85 % (C); recalibrate safety stock.</li>
+          <li><strong>Stabilise lead times</strong>: no SKU above its class’s 75th-percentile lead time.</li>
+        </ul>
+      </article>
+    </section>
+
+
+    <!-- Tools -->
+    <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
+      <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
+      <article class="relative z-10 p-6 md:p-8">
+        <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
+                   bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
+                   bg-clip-text text-transparent mb-4">
+          Tech&nbsp;&amp;&nbsp;Tools
+        </h3>
+        <p class="text-base md:text-lg text-gray-800 leading-relaxed">
+          Python · pandas · NumPy · Matplotlib · Tableau · Excel
+        </p>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="py-6 bg-indigo-50/60 backdrop-blur-sm">
+    <p class="text-center text-sm text-indigo-700">
+      &copy; 2025 Sameer Agarwal · <a href="mailto:sameera2@marshall.usc.edu" class="underline">Email</a>
+    </p>
+  </footer>
+</body>
+</html>
