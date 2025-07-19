@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=1280, initial-scale=1">
   <title>Inventory Control Management · Sameer Agarwal</title>
-  <link rel="stylesheet" href="assets/tailwind.min.css"><!-- if you switched to a local build -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .fade-right       { -webkit-mask-image:linear-gradient(to right,black 70%,transparent); mask-image:linear-gradient(to right,black 70%,transparent); }
     .fade-right-soft  { -webkit-mask-image:linear-gradient(to right,black 60%,transparent);   mask-image:linear-gradient(to right,black 60%,transparent); }
@@ -30,9 +30,8 @@
 
   <section class="bg-white shadow-lg overflow-hidden">
     <div class="md:grid md:grid-cols-[24rem_1fr] md:gap-0">
-      <!-- image -->
       <div class="relative h-56 md:h-full">
-        <img src="images/inventory_control.jpeg" 
+        <img src="images/inventory_control.jpeg"
              alt="Inventory Control Management"
              class="fade-right-soft absolute inset-0 w-full h-full object-cover">
       </div>
@@ -90,13 +89,13 @@
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
                    bg-clip-text text-transparent mb-4">
+          Approach
         </h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
-          <li><strong>Data prep &feature engineering</strong>&nbsp;— fixed dtypes, merged lead-time fields, created DoS, annual&nbsp;sales&nbsp;value, holding-cost metrics.</li>
+          <li><strong>Data prep &amp; feature engineering</strong>&nbsp;— fixed dtypes, merged lead-time fields, created DoS, annual sales value, holding-cost metrics.</li>
           <li><strong>ABC segmentation</strong>&nbsp;— flagged top 20 % SKUs (“A”) generating 80 % of revenue.</li>
           <li><strong>Risk &amp; cost quantification</strong>&nbsp;— computed opportunity vs. excess-holding cost per SKU.</li>
-          <li><strong>Policy optimisation</strong>&nbsp;— used Poisson variance for safety stock, derived reorder points,
-              calculated EOQ at $300/PO, 20 % holding rate.</li>
+          <li><strong>Policy optimisation</strong>&nbsp;— used Poisson variance for safety stock, derived reorder points, calculated EOQ at $300/PO, 20 % holding rate.</li>
         </ul>
       </article>
     </section>
@@ -124,18 +123,17 @@
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
                    bg-clip-text text-transparent mb-4">
+          Recommendations
         </h3>
         <ul class="list-disc pl-6 space-y-2 text-gray-800 text-base md:text-lg leading-relaxed">
           <li><strong>Raise reorder points</strong> on A-class SKUs whose DoS &lt; lead time.</li>
           <li><strong>Freeze new orders</strong> on C-items with DoS &gt; 90 days; clear stock via markdowns / kits.</li>
-          <li><strong>Audit real ordering cost</strong> (likely $100-150) → smaller EOQ → 10 % lower inventory.</li>
+          <li><strong>Audit real ordering cost</strong> (likely $100–150) → smaller EOQ → 10 % lower inventory.</li>
           <li><strong>Target service levels</strong>: 95 % (A) / 90 % (B) / 85 % (C); recalibrate safety stock.</li>
           <li><strong>Stabilise lead times</strong>: no SKU above its class’s 75th-percentile lead time.</li>
         </ul>
       </article>
     </section>
-
-
 
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
@@ -150,25 +148,25 @@
         </p>
       </article>
     </section>
+
     <section class="relative rounded-2xl overflow-hidden ring-1 ring-indigo-100/60 shadow-sm">
       <div class="absolute inset-0 bg-gradient-to-br from-indigo-50/70 via-purple-50/60 to-white/60 backdrop-blur-md"></div>
-  
       <article class="relative z-10 p-6 md:p-8">
         <h3 class="text-2xl md:text-3xl font-serif font-extrabold tracking-tight
                    bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500
                    bg-clip-text text-transparent mb-4">
           Full Project&nbsp;Report&nbsp;(PDF)
         </h3>
-  
+
         <iframe
-          src="docs/Inventory Control.pdf"
+          src="docs/Inventory_Control.pdf"
           title="Inventory Control Management Report"
-          class="w-full h-[600px] sm:h-[700px] md:h-[800px] rounded-lg shadow-md border"
-        ></iframe>
-  
+          class="w-full h-[600px] sm:h-[700px] md:h-[800px] rounded-lg shadow-md border">
+        </iframe>
+
         <p class="mt-4 text-sm text-gray-700">
           Can’t see the preview?
-          <a href="docs/Inventory Control.pdf" class="underline text-indigo-600">Download the PDF</a>.
+          <a href="docs/Inventory_Control.pdf" class="underline text-indigo-600">Download the PDF</a>.
         </p>
       </article>
     </section>
